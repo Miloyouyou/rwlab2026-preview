@@ -1,6 +1,6 @@
 # RWLab 只读网页预览
 
-网页地址：<https://miloyouyou.github.io/rwlab2022-preview/>
+网页地址：<https://miloyouyou.github.io/rwlab2026-preview/>
 
 本公开仓库只存放用于 GitHub Pages 的静态 HTML、样式、脚本、图片和公开附件。它不能运行 ASP.NET 后台，也不含 C# / Razor 源码、SQL 数据库、账号、私有论文或服务器配置。
 

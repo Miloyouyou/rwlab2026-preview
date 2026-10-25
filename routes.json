@@ -1615,6 +1615,8 @@
   "/Home/Facilities?userLang=_en": "en/home/facilities/index.html",
   "/Home/Index": "index.html",
   "/Home/Index?userLang=_en": "en/index.html",
+  "/Home/Legacy": "zh/home/legacy/index.html",
+  "/Home/Legacy?userLang=_en": "en/home/legacy/index.html",
   "/Home/Outputs": "zh/home/outputs/index.html",
   "/Home/Outputs?kind=project": "zh/home/outputs/q-1d1973571b88c095/index.html",
   "/Home/Outputs?kind=project&userLang=_en": "en/home/outputs/q-1d1973571b88c095/index.html",

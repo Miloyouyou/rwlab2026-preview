@@ -855,3 +855,7 @@ html{scroll-behavior:auto}
 .legacy-site-link{display:inline-flex;align-items:center;min-height:28px;white-space:nowrap;font-weight:600}
 .legacy-site-link:hover,.legacy-site-link:focus-visible{text-decoration:underline;text-underline-offset:3px}
 @media(max-width:960px){.university-links .university-affiliation{display:none}}
+.legacy-entrance{min-height:38vh}
+.legacy-entrance-card{max-width:720px;padding:32px 36px;background:#fff;border:1px solid #dce5ed;display:flex;flex-direction:column;align-items:flex-start;gap:20px}
+.legacy-entrance-card h2{margin:0;color:#173450;font-size:24px}
+@media(max-width:600px){.legacy-entrance-card{padding:25px 22px}}

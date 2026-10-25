@@ -140,6 +140,14 @@
 /* Progressive publication filtering; all papers remain readable without JavaScript. */
 (function () {
     'use strict';
+    // A static snapshot may outlive the old domain. Never send readers back to this site.
+    var link = document.querySelector('.legacy-original-link');
+    if (link && new URL(link.href).hostname === window.location.hostname) link.remove();
+})();
+
+/* Progressive publication filtering; all papers remain readable without JavaScript. */
+(function () {
+    'use strict';
     document.querySelectorAll('[data-publication-library]').forEach(function (root) {
         var papers = Array.from(root.querySelectorAll('[data-paper-group]'));
         var controls = Array.from(root.querySelectorAll('[data-paper-filter]'));
