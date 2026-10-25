@@ -791,14 +791,18 @@ html{scroll-behavior:auto}
 .nav-inner>a:hover,.nav-inner>.nav-research>a:hover,.nav-inner>.nav-conferences>a:hover{background:#edf4fb;color:#07488e;box-shadow:none}
 .nav-inner>a[aria-current=page],.nav-inner>.nav-research>a[aria-current=page],.nav-inner>.nav-conferences>a[aria-current=page]{background:#07488e;color:#fff;box-shadow:none}
 .nav-inner>a:after,.nav-inner>.nav-research>a:after,.nav-inner>.nav-conferences>a:after{display:none}
-.home-carousel .hero-slide.hero-photo{height:min(27.7778vw,480px);min-height:0}
+.home-carousel .hero-slide.hero-photo{height:min(34vw,620px);min-height:0}
 .home-carousel [data-slide-id=gallery-kuka] img{object-position:50% 70%}
+.home-carousel [data-slide-id=gallery-mobile-welding] img{object-position:50% 60%}
+.home-carousel [data-slide-id=gallery-lab-sign] img{object-fit:contain;background:#e8e8e6}
 .home-carousel [data-slide-id=gallery-abb] img{object-position:50% 50%}
 .home-carousel [data-slide-id=gallery-workcell] img{object-position:50% 45%}
 .home-carousel [data-slide-id=gallery-fanuc] img{object-position:50% 40%}
 .home-carousel [data-slide-id=gallery-welding] img{object-position:50% 35%}
 .home-carousel [data-slide-id=gallery-factory] img{object-position:50% 65%}
 .home-carousel [data-slide-id=gallery-team] img{object-position:50% 50%}
+/* Preserve the complete emblem and both names on the supplied laboratory sign. */
+.home-carousel [data-slide-id=gallery-lab-sign] img{object-fit:contain;object-position:center;background:#d2d6d5}
 .home-editorial{padding-top:0;background:#f4f6f8}
 .home-editorial .section-heading{align-items:baseline;margin:0 0 24px;padding-bottom:16px;border-bottom:1px solid #d5e0eb}
 .home-editorial .section-heading h2{font-size:28px;margin:0;line-height:1.5}
@@ -842,7 +846,7 @@ html{scroll-behavior:auto}
 .home-certificates{padding-bottom:50px}
 @media(max-width:1200px){.home-publication-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.research-direction-list{grid-template-columns:repeat(2,minmax(0,1fr))}.home-certificate-card img{height:220px}}
 @media(max-width:1050px){.navigation-ready .nav-inner{gap:4px;padding-block:10px}.site-header .header-inner{min-height:92px}.nav-inner>a,.nav-inner>.nav-research>a,.nav-inner>.nav-conferences>a{white-space:normal;font-size:14px}.home-certificate-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:760px){.home-carousel .hero-slide.hero-photo{height:50vw;min-height:0}.home-lab-summary{padding:26px 0;display:block}.home-lab-summary>a{margin-top:12px}.home-lab-summary h2,.home-editorial .section-heading h2{font-size:24px}.home-lab-summary p{font-size:15px}.home-news,.home-research,.home-publications,.home-certificates{padding-top:28px}.home-news-list{grid-template-columns:1fr}.home-news-list h3{font-size:18px}.home-news-list li+li a{padding-top:20px}.home-research .research-framework{padding:20px}.research-framework h2{font-size:19px}.research-direction-list{grid-template-columns:1fr;gap:0}.research-direction-list a{min-height:58px;font-size:16px}.home-publication-grid{grid-template-columns:1fr;gap:16px}.home-paper-card{display:grid;grid-template-columns:110px minmax(0,1fr);align-items:start}.paper-cover{height:172px;padding:8px;border-bottom:0}.paper-copy{padding:15px}.paper-copy h3{font-size:15px;line-height:1.55}.paper-authors,.paper-citation{font-size:12px}.home-certificate-grid{gap:14px}.home-certificate-card{padding:12px}.home-certificate-card img{height:215px}.home-certificate-card h3{font-size:14px;line-height:1.7}.home-certificates{padding-bottom:35px}}
+@media(max-width:760px){.home-carousel .hero-slide.hero-photo{height:68vw;min-height:220px;max-height:400px}.home-lab-summary{padding:26px 0;display:block}.home-lab-summary>a{margin-top:12px}.home-lab-summary h2,.home-editorial .section-heading h2{font-size:24px}.home-lab-summary p{font-size:15px}.home-news,.home-research,.home-publications,.home-certificates{padding-top:28px}.home-news-list{grid-template-columns:1fr}.home-news-list h3{font-size:18px}.home-news-list li+li a{padding-top:20px}.home-research .research-framework{padding:20px}.research-framework h2{font-size:19px}.research-direction-list{grid-template-columns:1fr;gap:0}.research-direction-list a{min-height:58px;font-size:16px}.home-publication-grid{grid-template-columns:1fr;gap:16px}.home-paper-card{display:grid;grid-template-columns:110px minmax(0,1fr);align-items:start}.paper-cover{height:172px;padding:8px;border-bottom:0}.paper-copy{padding:15px}.paper-copy h3{font-size:15px;line-height:1.55}.paper-authors,.paper-citation{font-size:12px}.home-certificate-grid{gap:14px}.home-certificate-card{padding:12px}.home-certificate-card img{height:215px}.home-certificate-card h3{font-size:14px;line-height:1.7}.home-certificates{padding-bottom:35px}}
 @media(max-width:400px){.home-paper-card{grid-template-columns:90px minmax(0,1fr)}.paper-cover{height:145px;padding:6px}.paper-copy{padding:12px}.home-certificate-grid{grid-template-columns:1fr}.home-certificate-card img{height:290px}}
 
 /* The legacy-site entry stays separate from the primary navigation. */

@@ -42,7 +42,7 @@
     document.querySelectorAll('[data-carousel]').forEach(function (root) {
         var slides=Array.from(root.querySelectorAll('[data-slide]'));
         var dots=Array.from(root.querySelectorAll('[data-slide-to]'));
-        var index=0, touchX=null, touchY=null, timer=null, hovered=false, focused=false;
+        var index=0, touchX=null, touchY=null, timer=null, hovered=false, focused=false, pendingSlide=0;
         var track=root.querySelector('.hero-slides'), pause=root.querySelector('[data-slide-pause]');
         var reduced=window.matchMedia('(prefers-reduced-motion: reduce)'), paused=reduced.matches;
         if(slides.length<2||!track||!pause)return;
@@ -53,7 +53,7 @@
             if(!paused&&!hovered&&!focused&&!document.hidden)timer=setTimeout(function(){show(index+1,false);},4500);
         }
         function updatePause(){pause.setAttribute('aria-pressed',String(paused));pause.setAttribute('aria-label',paused?pause.dataset.playLabel:pause.dataset.pauseLabel);pause.textContent=paused?'▶':'Ⅱ';}
-        function show(next,announce) {
+        function activate(next,announce) {
             var wrap=next===slides.length&&!reduced.matches;
             track.classList.remove('no-transition');
             index=(next+slides.length)%slides.length;
@@ -65,6 +65,20 @@
             dots.forEach(function(dot,i){dot.setAttribute('aria-pressed',String(i===index));});
             if(announce)root.querySelector('[data-slide-status]').textContent=(index+1)+' / '+slides.length;
             schedule();
+        }
+        function show(next,announce) {
+            var destination=(next+slides.length)%slides.length;
+            var image=slides[destination].querySelector('img');
+            var request=++pendingSlide;
+            if(image)image.loading='eager';
+            if(destination!==0&&image&&!image.complete){
+                clearTimeout(timer);
+                var finish=function(){if(request===pendingSlide)activate(next,announce);};
+                image.addEventListener('load',finish,{once:true});
+                image.addEventListener('error',finish,{once:true});
+                return;
+            }
+            activate(next,announce);
         }
         track.addEventListener('transitionend',function(e){if(e.target!==track||e.propertyName!=='transform')return;if(index===0){track.classList.add('no-transition');track.style.transform='translateX(0)';}});
         pause.addEventListener('click',function(){paused=!paused;updatePause();schedule();});
