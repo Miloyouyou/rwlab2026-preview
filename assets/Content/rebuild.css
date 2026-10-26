@@ -179,7 +179,6 @@
  .header-inner{display:grid!important;grid-template-columns:1fr;gap:12px!important}
  .header-tools{width:100%;justify-content:flex-end}
  .site-search{width:auto;flex:1}
- .header-tools .admin-link{display:none}
  .brand-title{font-size:19px!important}
  .hero-primary .hero-image-link{height:auto}
  .hero-primary img{height:auto!important;object-fit:contain!important}
@@ -259,8 +258,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #00
 .brand-title small{display:block;font-size:9px;letter-spacing:.08em;font-weight:500;color:var(--muted);margin-top:5px}
 .header-tools{display:flex;align-items:center;gap:28px;flex:none;font-size:12px}
 .language-link{font-weight:700;letter-spacing:.08em}
-.admin-link{color:var(--muted);padding-left:24px;border-left:1px solid var(--line)}
-.admin-link span{padding-left:9px}
 .menu-toggle{display:none}
 .site-nav{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:white}
 .nav-inner{display:flex;align-items:stretch;justify-content:space-between;gap:16px}
@@ -429,7 +426,6 @@ article.inner-page{max-width:940px}
 .nav-inner a{font-size:13px}}
 @media(max-width:1050px){
 .header-inner{min-height:84px}
-.admin-link{display:none}
 .header-tools{gap:22px}
 .nav-inner{flex-wrap:wrap;justify-content:flex-start;gap:0 28px}
 .nav-inner a{min-height:47px}
@@ -780,9 +776,8 @@ html{scroll-behavior:auto}
 .brand-title,.brand-title small{color:#fff}
 .brand-title small{opacity:.86}
 .site-header .site-search{background:#063e7c;border-color:#4779ad}
-.site-header .site-search-input,.site-header .search-submit,.site-header .language-link,.site-header .admin-link{color:#fff}
+.site-header .site-search-input,.site-header .search-submit,.site-header .language-link{color:#fff}
 .site-header .site-search-input::placeholder{color:#d7e5f3}
-.site-header .admin-link{border-color:#497caf}
 .site-header .menu-toggle{color:#fff}
 .site-nav{background:#fff;color:#203c57;border-top:0;border-bottom:1px solid #dce5ed}
 .nav-inner{gap:0;justify-content:space-between}
@@ -849,12 +844,10 @@ html{scroll-behavior:auto}
 @media(max-width:760px){.home-carousel .hero-slide.hero-photo{height:68vw;min-height:220px;max-height:400px}.home-lab-summary{padding:26px 0;display:block}.home-lab-summary>a{margin-top:12px}.home-lab-summary h2,.home-editorial .section-heading h2{font-size:24px}.home-lab-summary p{font-size:15px}.home-news,.home-research,.home-publications,.home-certificates{padding-top:28px}.home-news-list{grid-template-columns:1fr}.home-news-list h3{font-size:18px}.home-news-list li+li a{padding-top:20px}.home-research .research-framework{padding:20px}.research-framework h2{font-size:19px}.research-direction-list{grid-template-columns:1fr;gap:0}.research-direction-list a{min-height:58px;font-size:16px}.home-publication-grid{grid-template-columns:1fr;gap:16px}.home-paper-card{display:grid;grid-template-columns:110px minmax(0,1fr);align-items:start}.paper-cover{height:172px;padding:8px;border-bottom:0}.paper-copy{padding:15px}.paper-copy h3{font-size:15px;line-height:1.55}.paper-authors,.paper-citation{font-size:12px}.home-certificate-grid{gap:14px}.home-certificate-card{padding:12px}.home-certificate-card img{height:215px}.home-certificate-card h3{font-size:14px;line-height:1.7}.home-certificates{padding-bottom:35px}}
 @media(max-width:400px){.home-paper-card{grid-template-columns:90px minmax(0,1fr)}.paper-cover{height:145px;padding:6px}.paper-copy{padding:12px}.home-certificate-grid{grid-template-columns:1fr}.home-certificate-card img{height:290px}}
 
-/* The legacy-site entry stays separate from the primary navigation. */
-.university-bar .site-container{column-gap:12px}
-.university-links{display:flex;align-items:center;gap:20px;flex-shrink:0}
-.legacy-site-link{display:inline-flex;align-items:center;min-height:28px;white-space:nowrap;font-weight:600}
-.legacy-site-link:hover,.legacy-site-link:focus-visible{text-decoration:underline;text-underline-offset:3px}
-@media(max-width:960px){.university-links .university-affiliation{display:none}}
+/* Keep the old-site entry beside the language switch, including on mobile. */
+.site-header .legacy-site-link{display:inline-flex;align-items:center;min-height:36px;white-space:nowrap;font-weight:600;color:#fff}
+.site-header .legacy-site-link:hover,.site-header .legacy-site-link:focus-visible{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:600px){.site-header .legacy-site-link{font-size:11px}}
 .legacy-entrance{min-height:38vh}
 .legacy-entrance-card{max-width:720px;padding:32px 36px;background:#fff;border:1px solid #dce5ed;display:flex;flex-direction:column;align-items:flex-start;gap:20px}
 .legacy-entrance-card h2{margin:0;color:#173450;font-size:24px}
