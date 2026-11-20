@@ -78,6 +78,17 @@ table{width:100%;border-collapse:collapse;text-align:left;line-height:1.7}
 th{background:#eee;font-weight:700}
 th,td{padding:10px;border:1px solid #ddd;vertical-align:top;overflow-wrap:anywhere}
 .fee{white-space:nowrap;color:#b02621;font-weight:700}
+.keynote-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:0 0 24px}
+.keynote-card{border:1px solid #d9e0e6;border-top:4px solid var(--heading);padding:18px;background:#fff}
+.keynote-card .report-number{margin:0 0 8px;color:var(--heading);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.keynote-card h3{margin:0 0 8px;color:#173d5c;font-size:21px;line-height:1.4}
+.speaker-role,.speaker-affiliation{margin:0 0 5px;line-height:1.65}
+.speaker-affiliation{color:#65717c}
+.report-title{margin:14px -18px -18px;padding:13px 18px 16px;background:#edf3f7}
+.report-title span{display:block;margin-bottom:5px;color:#65717c;font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+.report-title strong{display:block;color:#173d5c;font-size:16px;line-height:1.65}
+.industry-report-table th:first-child,.industry-report-table td:first-child{width:52px;text-align:center;white-space:nowrap}
+.programme-note{color:#5d6872;font-size:13px}
 .actions{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
 .button{display:inline-block;padding:7px 14px;background:var(--nav);color:#fff;border:1px solid var(--nav);border-radius:3px}
 .button:hover{background:#0750bd;color:#fff;text-decoration:none}
@@ -112,6 +123,7 @@ footer a{color:#fff}
  main{grid-row:1}.secondary-sidebar{grid-row:2}.primary-sidebar{grid-row:3}
  .inner-page .primary-sidebar{grid-row:2}
  aside{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:start}
+ .keynote-grid{grid-template-columns:1fr}
  .sidebar,.secondary-sidebar .sidebar:first-child{margin:0}.participate{height:65px}
 }
 @media(max-width:480px){
@@ -124,5 +136,11 @@ footer a{color:#fff}
  .topics,aside{grid-template-columns:1fr}
  .committee-list>div,.contact-details>div{grid-template-columns:1fr;gap:3px}
  th,td{padding:7px 5px}.downloads a{gap:8px}
+ .industry-report-table,.industry-report-table tbody,.industry-report-table tr,.industry-report-table td{display:block;width:100%}
+ .industry-report-table thead{display:none}
+ .industry-report-table tr{margin:0 0 12px;border:1px solid #d9e0e6;border-top:3px solid var(--heading);padding:8px 10px}
+ .industry-report-table td,.industry-report-table td:first-child{display:grid;grid-template-columns:66px minmax(0,1fr);gap:8px;width:auto;padding:5px 0;border:0;border-bottom:1px dotted #d9e0e6;text-align:left;white-space:normal}
+ .industry-report-table td:last-child{border-bottom:0}
+ .industry-report-table td::before{content:attr(data-label);color:#65717c;font-size:12px}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
