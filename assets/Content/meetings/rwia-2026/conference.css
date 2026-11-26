@@ -88,6 +88,14 @@ th,td{padding:10px;border:1px solid #ddd;vertical-align:top;overflow-wrap:anywhe
 .report-title span{display:block;margin-bottom:5px;color:#65717c;font-size:12px;letter-spacing:.04em;text-transform:uppercase}
 .report-title strong{display:block;color:#173d5c;font-size:16px;line-height:1.65}
 .industry-report-table th:first-child,.industry-report-table td:first-child{width:52px;text-align:center;white-space:nowrap}
+.industry-report-table th:nth-child(2){width:105px}
+.industry-report-table th:nth-child(3){width:240px}
+.industry-affiliation,.industry-role{display:block}
+.industry-role{margin-top:4px;color:#65717c}
+.industry-title{min-width:240px;color:#173d5c;font-weight:600}
+.speaker-bio{margin-top:9px;color:#333;font-weight:400}
+.speaker-bio summary{cursor:pointer;color:#2676b4;font-size:13px;font-weight:700}
+.speaker-bio p{margin:7px 0 0;color:#4d5963;font-size:13px;line-height:1.75}
 .programme-note{color:#5d6872;font-size:13px}
 .actions{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
 .button{display:inline-block;padding:7px 14px;background:var(--nav);color:#fff;border:1px solid var(--nav);border-radius:3px}
